@@ -4,6 +4,7 @@ import pymysql
 
 app = Flask(__name__)
 CORS(app)
+CORS(app, resources={r'*':{'origins': '*'}})
 
 db = pymysql.connect(
     host="compdb",
